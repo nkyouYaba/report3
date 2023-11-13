@@ -27,13 +27,30 @@ public class Hero {
         dead = false;
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
     }
+    /** ヒーローの名前のセッター*/
     public void setName(String name){this.name = name;}
+    /** ヒーローの攻撃力のセッター*/
     public void setAttack(int attack){this.attack = attack;}
+    /** ヒーローの生死状態のセッター*/
     public void setDead(boolean dead){this.dead = dead;}
+    /** ヒーローのHPのセッター*/
     public void setHitPoint(int hitPoint){this.hitPoint = hitPoint;}
+    /** ヒーローの名前のゲッター
+     * @return ヒーローの名前
+    */
     public String getName(){return name;}
+    /** ヒーローの攻撃力のゲッター
+     * @return ヒーローの攻撃力
+    */
     public int getAttack(){return attack;}
+    /** ヒーローの生死状態のゲッター
+     * @return ヒーローの生死状態
+    */
     public boolean getDead(){return dead;}
+    /** ヒーローのHPのゲッター
+     * @return ヒーローのHP
+    */
+    
     public int getHitPoint(){return hitPoint;}
     /**
      * Enemyへ攻撃するメソッド。

@@ -27,14 +27,31 @@ public class Enemy {
         dead = false;
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
     }
+    /** 敵の名前のセッター*/
     public void setName(String name){this.name = name;}
+    /** 敵の攻撃力のセッター*/
     public void setAttack(int attack){this.attack = attack;}
+    /** 敵の生死状態のセッター*/
     public void setDead(boolean dead){this.dead = dead;}
+    /** 敵のHPのセッター*/
     public void setHitPoint(int hitPoint){this.hitPoint = hitPoint;}
+    /** 敵の名前のゲッター
+     * @return ヒーローの名前
+    */
     public String getName(){return name;}
+    /** 敵の攻撃力のゲッター
+     * @return ヒーローの攻撃力
+    */
     public int getAttack(){return attack;}
+    /** 敵の生死状態のゲッター
+     * @return ヒーローの生死状態
+    */
     public boolean getDead(){return dead;}
+    /** 敵のHPのゲッター
+     * @return ヒーローのHP
+    */
     public int getHitPoint(){return hitPoint;}
+    
     /**
      * Heroへ攻撃するメソッド。
      * attackに応じて乱数でダメージを算出し、hero.wounded()によりダメージ処理を実行。
