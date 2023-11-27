@@ -30,6 +30,13 @@ public class LivingThing {
     public String getName(){
         return name;
     }
+    /** 攻撃力のゲッター
+     * @return 攻撃力
+    */
+    public int getAttack(){
+        return attack;
+    }
+
     /** HPのゲッター
      * @return HP
     */
@@ -50,6 +57,13 @@ public class LivingThing {
         }
     }
 
+    public void attackWithWeponSkill(LivingThing opponent){
+        if(dead == false){
+            int damage = (int)(attack * 3/2);
+            System.out.printf("%sの攻撃！ウェポンスキルを発動！%sに%dのダメージを与えた！！\n", name, opponent.getName(), damage);
+            opponent.wounded(damage);    
+        }
+    }
     /**
      * 自身へ攻撃されたときのダメージ処理をするメソッド。
      * 指定されたダメージを hitPoint から引き、死亡判定を行う。
